@@ -150,8 +150,12 @@ end
 %figure; plot(squeeze(nanmean(MxSbjCisi(1,:,64,:),2)),'r')
 
 %figure; pop_timtopo(EEG, [-1 700.0469], [], 'ERP data and scalp maps','plotchans',[25,26,27,29,61,62,63]);
- % topoplot(squeeze(mean(EEG.data(:,200,:),3)), EEG.chanlocs, 'electrodes', 'numbers')
+% topoplot(squeeze(mean(EEG.data(:,200,:),3)), EEG.chanlocs, 'electrodes', 'numbers')
 
+% FOR ERPS, ITC CALCULATION
+% in loadfromPRP_ERP : [P,R,mbase,times,freqs,Pboot,Rboot,Rphase,PA] =  pop_newtimef( EEG, 1, 29, [-100  998], [3         0.5] , 'topovec', 29, 'elocs', EEG.chanlocs, 'chaninfo', EEG.chaninfo, 'caption', 'Oz', 'baseline',[0], 'freqs', [0 40], 'plotphase', 'off', 'ntimesout', 50, 'padratio', 1)
+
+ 
 
 
 
